@@ -17,13 +17,19 @@ CREATE TABLE peerdb.test_table
     `uid` Nullable(String),
     `int32` Int32,
     `datetime` Nullable(DateTime64(6)),
-    `bool` Bool
+    `bool` Bool,
 ...
 )
 ENGINE = ReplacingMergeTree(id)
 PRIMARY KEY id
 ORDER BY id
 SETTINGS index_granularity = 8192;
+```
+
+```bash
+$ cat /etc/hosts
+
+127.0.0.1 host.docker.internal
 ```
 
 ## postgresql:
